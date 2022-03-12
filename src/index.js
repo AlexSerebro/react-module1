@@ -1,12 +1,7 @@
 import ReactDOM from "react-dom";
-import paintings from "./paintings.json";
+import App from "./App";
 
-// import React, { Children } from "react";
-// import ReactDOM from "react-dom";
-// import { renderIntoDocument } from "react-dom/test-utils";
-// import './index.css';
-// import App from './App';
-// import reportWebVitals from './reportWebVitals';
+ReactDOM.render(<App />, document.querySelector("#root"));
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -35,20 +30,3 @@ import paintings from "./paintings.json";
 // console.log("~ jsxElem", jsxElem);
 
 // ReactDOM.render(jsxElem, document.querySelector("#root"));
-
-const data = paintings[0];
-
-const painting = (
-  <div>
-    <img src={data.url} alt={data.title} width="480" />
-    <h2>{data.title}</h2>
-    <p>
-      Author<a href={data.author.url}>{data.author.tag}</a>
-    </p>
-    <p>Price:{data.price} credit</p>
-    <p>some text</p>
-    <button type="button">Add to cart</button>
-  </div>
-);
-
-ReactDOM.render(painting, document.querySelector("#root"));
