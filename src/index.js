@@ -36,14 +36,16 @@ import paintings from "./paintings.json";
 
 // ReactDOM.render(jsxElem, document.querySelector("#root"));
 
+const data = paintings[0];
+
 const painting = (
   <div>
-    <img src={paintings.url} alt={paintings.title} width="480" />
-    <h2>{paintings.title}</h2>
+    <img src={data.url} alt={data.title} width="480" />
+    <h2>{data.title}</h2>
     <p>
-      Autor<a href={paintings.autor.url}>{paintings.autor.tag}</a>
+      Author<a href={data.author.url}>{data.author.tag}</a>
     </p>
-    <p>Price:{paintings.price} credit</p>
+    <p>Price:{data.price} credit</p>
     <p>some text</p>
     <button type="button">Add to cart</button>
   </div>
