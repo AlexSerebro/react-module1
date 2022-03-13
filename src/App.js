@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div>
       <Painting
-        url={paintings[1].url}
+        imgUrl={paintings[1].url}
         title={paintings[1].title}
         authorName={paintings[1].author.tag}
         profileUrl={paintings[1].author.url}
