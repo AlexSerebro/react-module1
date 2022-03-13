@@ -15,7 +15,7 @@ export default function Painting(props) {
       <img src={imgUrl} alt={title} width="480" />
       <h2>{props.title}</h2>
       <p>
-        Author<a href={profileUrl}>{authorName}</a>
+        Author: <a href={profileUrl}>{authorName}</a>
       </p>
       <p>Price:{price} credit</p>
       <p>Доступность: {quantity < 10 ? "Заканчивается" : "есть в наличии"}</p>
@@ -25,10 +25,10 @@ export default function Painting(props) {
 }
 
 Painting.propTypes = {
-  imgUrl: PropTypes.string,
-  title: PropTypes.string,
-  authorName: PropTypes.string,
-  profileUrl: PropTypes.string,
-  price: PropTypes.number,
-  quantity: PropTypes.number,
+  imgUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  authorName: PropTypes.string.isRequired,
+  profileUrl: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  quantity: PropTypes.number.isRequired,
 };
